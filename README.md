@@ -1,2 +1,2 @@
 # SlideRemote
-Remote control project for speeches and presentations
+Remote control for PC on esp8266
