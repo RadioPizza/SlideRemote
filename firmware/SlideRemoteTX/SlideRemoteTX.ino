@@ -27,6 +27,7 @@ void setup() {
   WiFi.mode(WIFI_STA);
   if (esp_now_init() != 0) {
     Serial.println("Error initializing ESP-NOW");
+    digitalWrite(BUILTIN_LED, HIGH);
     return;
   }
   esp_now_set_self_role(ESP_NOW_ROLE_CONTROLLER);
@@ -37,7 +38,11 @@ void setup() {
 void updateButtonsState(bool next, bool prev) {
   myData.buttonNext = next;
   myData.buttonPrev = prev;
-  esp_now_send(broadcastAddress, (uint8_t *)&myData, sizeof(myData));
+  int result = esp_now_send(broadcastAddress, (uint8_t *)&myData, sizeof(myData));
+  if(result != 0) {
+    Serial.println("Error sending the data");
+    digitalWrite(BUILTIN_LED, HIGH);
+  }
 }
 
 void handleLaserButton() {
@@ -64,6 +69,6 @@ void loop() {
   buttonPrev.tick();
   buttonNext.tick();
   buttonLaser.tick();
-  handleLaserButton();
   handleSlideButtons();
+  handleLaserButton();
 }
