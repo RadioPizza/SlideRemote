@@ -28,6 +28,7 @@
 - **libraries** - библиотеки проекта. Заменить имеющиеся версии
 - **firmware** - прошивки для МК
 - **schemes** - схемы подключения компонентов
+- **CAD** - 3D модели, корпуса
 
 <a id="chapter-2"></a>
 ## Схемы
@@ -45,10 +46,11 @@
 | Модуль зарядки TP4056 | 30 ₽  | 1 шт.  | 30 ₽      | https://aliexpress.ru/item/32467578996.html?sku_id=10000003716909975&spm=a2g2w.productlist.search_results.0.3c313100BdBFoH https://aliexpress.ru/item/1005005741783050.html?sku_id=12000034179251543&spm=a2g2w.productlist.search_results.2.5f2666cfGdj9Ts    | Необходимо выбирать со встроенной схемой защиты                  |
 | Аккумулятор           | 250 ₽ | 1 шт.  | 250 ₽     | https://aliexpress.ru/item/1005005684424738.html?sku_id=12000037283578784&spm=a2g2w.productlist.search_results.3.b37f312dNCFooa https://aliexpress.ru/item/4000939330410.html?sku_id=10000011329005536&spm=a2g2w.productlist.search_results.10.38178760eEMGWR | Можно использовать аккумуляторы из одноразок                     |
 | Digispark             | 250 ₽ | 1 шт.  | 250 ₽     | https://aliexpress.ru/item/32807895683.html?sku_id=10000007831801690&spm=a2g2w.productlist.search_results.0.57674f500AUV34 https://aliexpress.ru/item/1005004203065658.html?sku_id=12000028365468636&spm=a2g2w.productlist.search_results.3.5d115ba6QB8ZHz    |                                                                  |
+| Переключатель         | 20 ₽  | 1 шт.  | 20 ₽      | https://aliexpress.ru/item/4001202080623.html?sku_id=10000015286215548&spm=a2g2w.productlist.search_results.15.36e9243dFkvmUQ https://aliexpress.ru/item/1005001513148147.html?sku_id=12000031633680801&spm=a2g2w.productlist.search_results.0.6c5450dcP7qKsL | Нужен для откючения питания                                      |
 
-Можно использовать ...
+Можно вместо одной из плат Wemos D1 Mini и платы TP4056 использовать очень интересную плату ESP-Wroom-02 D1 Mini + 18650, представляющую собой ESP8266 со встроенной зарядкой для литиевых аккумуляторов и холдером для аккумуляторов 18650 - https://aliexpress.ru/item/33060514583.html?sku_id=67531965171&spm=a2g2w.productlist.search_results.9.57387298mYMHuy
 
-Итоговая стоимость варьируется от **450 рублей** (при покупке мелким оптом и повторном использовании кнопок и аккумулятора) до 2000 рублей (при покупке в розницу в местных магазинах и использовании нового большого аккумулятора)
+Итоговая стоимость варьируется от **450 рублей** (при покупке мелким оптом и повторном использовании кнопок и аккумулятора) до **2000 рублей** (при покупке в розницу в местных магазинах и использовании нового большого аккумулятора)
 
 <a id="chapter-4"></a>
 ## Как скачать и прошить
@@ -59,10 +61,12 @@
 * Продолжение не дописано
 
 
-## Настройки в коде
+### Настройки в коде
 // Настройка пинов подключения
 Button buttonPrev(D1);
 Button buttonNext(D2);
 Button buttonLaser(D3);
 #define LASER_PIN D0
-	
+
+// MAC адрес приёмника
+uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};	
