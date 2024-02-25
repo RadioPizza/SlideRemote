@@ -6,10 +6,9 @@
 * [Материалы и компоненты](#chapter-3)
 * [Как скачать и прошить](#chapter-4)
 
-
 <a id="chapter-0"></a>
 ## Описание проекта
-Представляем вашему вниманию пульт для выступлений с презентациями на основе ESP8266!
+Представляем вашему вниманию пульт для выступлений с презентациями на основе ESP8266! Проект предствляет собой замену дорогих импортных аналогов. Его главные преимущества - цена и кастомизация. Вы можете создать для него индвидуальный корпус и добавить функции, нужные именно вам.
 
 ### Железо
 - Проект собран на базе пары микроконтроллеров ESP8266.
@@ -40,12 +39,12 @@
 ### Макет на готовых модулях
 | Наименование          | Цена  | Кол-во | Стоимость | Ссылка                                                                                                                                                                                                                                                        | Комментарий                                                      |
 |-----------------------|-------|--------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| Wemos D1 Mini         | 150 р | 2 шт.  | 300 р     | https://aliexpress.ru/item/1005004691735010.html?sku_id=12000030118892637&spm=.search_results.2.b5fe6debne6nar https://aliexpress.ru/item/1005001621784437.html?sku_id=12000030876907542&spm=.search_results.0.b5fe6debne6nar                                 | Можно использовать любые другие отладочные платы на базе ESP8266 |
-| Кнопки                | 5 р   | 3 шт.  | 15 р      | https://aliexpress.ru/item/1005002483504604.html?sku_id=12000020816258869&spm=a2g2w.productlist.search_results.0.295d5690FECFoV https://aliexpress.ru/item/32815841388.html?sku_id=64712982838&spm=a2g2w.productlist.search_results.0.5ebf17d7lz9Jjz          | Подойдут абсолютно любые                                         |
-| Лазерный диод         | 30 р  | 1 шт.  | 30 р      | https://aliexpress.ru/item/32436757591.html?sku_id=65633931684&spm=a2g2w.productlist.search_results.2.372f151e5sMS8q https://aliexpress.ru/item/590519565.html?sku_id=65690681743&spm=a2g2w.productlist.search_results.0.372f151e5sMS8q                       | 5 В, 5 мВт, 650 нм                                               |
-| Модуль зарядки TP4056 | 30 р  | 1 шт.  | 30 р      | https://aliexpress.ru/item/32467578996.html?sku_id=10000003716909975&spm=a2g2w.productlist.search_results.0.3c313100BdBFoH https://aliexpress.ru/item/1005005741783050.html?sku_id=12000034179251543&spm=a2g2w.productlist.search_results.2.5f2666cfGdj9Ts    | Необходимо выбирать со встроенной схемой защиты                  |
-| Аккумулятор           | 250 р | 1 шт.  | 250 р     | https://aliexpress.ru/item/1005005684424738.html?sku_id=12000037283578784&spm=a2g2w.productlist.search_results.3.b37f312dNCFooa https://aliexpress.ru/item/4000939330410.html?sku_id=10000011329005536&spm=a2g2w.productlist.search_results.10.38178760eEMGWR | Можно использовать аккумуляторы из одноразок                     |
-| Digispark             | 250 р | 1 шт.  | 250 р     | https://aliexpress.ru/item/32807895683.html?sku_id=10000007831801690&spm=a2g2w.productlist.search_results.0.57674f500AUV34 https://aliexpress.ru/item/1005004203065658.html?sku_id=12000028365468636&spm=a2g2w.productlist.search_results.3.5d115ba6QB8ZHz    |                                                                  |
+| Wemos D1 Mini         | 150 ₽ | 2 шт.  | 300 ₽     | https://aliexpress.ru/item/1005004691735010.html?sku_id=12000030118892637&spm=.search_results.2.b5fe6debne6nar https://aliexpress.ru/item/1005001621784437.html?sku_id=12000030876907542&spm=.search_results.0.b5fe6debne6nar                                 | Можно использовать любые другие отладочные платы на базе ESP8266 |
+| Кнопки                | 5 ₽   | 3 шт.  | 15 ₽      | https://aliexpress.ru/item/1005002483504604.html?sku_id=12000020816258869&spm=a2g2w.productlist.search_results.0.295d5690FECFoV https://aliexpress.ru/item/32815841388.html?sku_id=64712982838&spm=a2g2w.productlist.search_results.0.5ebf17d7lz9Jjz          | Подойдут абсолютно любые                                         |
+| Лазерный диод         | 30 ₽  | 1 шт.  | 30 ₽      | https://aliexpress.ru/item/32436757591.html?sku_id=65633931684&spm=a2g2w.productlist.search_results.2.372f151e5sMS8q https://aliexpress.ru/item/590519565.html?sku_id=65690681743&spm=a2g2w.productlist.search_results.0.372f151e5sMS8q                       | 5 В, 5 мВт, 650 нм                                               |
+| Модуль зарядки TP4056 | 30 ₽  | 1 шт.  | 30 ₽      | https://aliexpress.ru/item/32467578996.html?sku_id=10000003716909975&spm=a2g2w.productlist.search_results.0.3c313100BdBFoH https://aliexpress.ru/item/1005005741783050.html?sku_id=12000034179251543&spm=a2g2w.productlist.search_results.2.5f2666cfGdj9Ts    | Необходимо выбирать со встроенной схемой защиты                  |
+| Аккумулятор           | 250 ₽ | 1 шт.  | 250 ₽     | https://aliexpress.ru/item/1005005684424738.html?sku_id=12000037283578784&spm=a2g2w.productlist.search_results.3.b37f312dNCFooa https://aliexpress.ru/item/4000939330410.html?sku_id=10000011329005536&spm=a2g2w.productlist.search_results.10.38178760eEMGWR | Можно использовать аккумуляторы из одноразок                     |
+| Digispark             | 250 ₽ | 1 шт.  | 250 ₽     | https://aliexpress.ru/item/32807895683.html?sku_id=10000007831801690&spm=a2g2w.productlist.search_results.0.57674f500AUV34 https://aliexpress.ru/item/1005004203065658.html?sku_id=12000028365468636&spm=a2g2w.productlist.search_results.3.5d115ba6QB8ZHz    |                                                                  |
 
 Можно использовать ...
 
