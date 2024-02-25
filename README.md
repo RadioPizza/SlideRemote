@@ -56,8 +56,8 @@
 ## Как скачать и прошить
 * Скачать архив с проектом
 * Установить библиотеки в 
-`C:\Program Files (x86)\Arduino\libraries\` (Windows x64)  
-`C:\Program Files\Arduino\libraries\` (Windows x86)
+  - `C:\Program Files (x86)\Arduino\libraries\` (Windows x64)  
+  - `C:\Program Files\Arduino\libraries\` (Windows x86)
 * Продолжение не дописано
 
 
