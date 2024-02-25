@@ -62,6 +62,7 @@
 
 
 ### Настройки в коде
+'''cpp
 // Настройка пинов подключения
 Button buttonPrev(D1);
 Button buttonNext(D2);
@@ -69,4 +70,5 @@ Button buttonLaser(D3);
 #define LASER_PIN D0
 
 // MAC адрес приёмника
-uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};	
+uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
+'''
