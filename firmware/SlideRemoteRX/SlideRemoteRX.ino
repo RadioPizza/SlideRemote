@@ -2,6 +2,7 @@
 #include <ESP8266WiFi.h>
 #include <espnow.h>
 
+// Настройка пинов подключения
 #define prevPIN D4
 #define nextPIN D3
 
@@ -26,11 +27,15 @@ void OnDataRecv(uint8_t * mac, uint8_t *incomingData, uint8_t len) {
     digitalWrite(prevPIN, HIGH);
     delay(10);
     digitalWrite(prevPIN, LOW);
-    // Действие при получении команды "Previous"
+    // Действие при получении команды "Prev"
   }
 }
 
 void setup() {
+  pinMode(nextPIN, OUTPUT);
+  pinMode(prevPIN, OUTPUT);
+  digitalWrite(nextPIN, LOW);
+  digitalWrite(prevPIN, LOW);
   Serial.begin(9600);
   // Инициализация Wi-Fi в режиме станции
   WiFi.mode(WIFI_STA);
