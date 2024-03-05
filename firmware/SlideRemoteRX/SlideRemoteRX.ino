@@ -1,3 +1,6 @@
+// SlideRemote v1.0.0
+// Приёмник
+
 // Подключение библиотек
 #include <ESP8266WiFi.h>
 #include <espnow.h>

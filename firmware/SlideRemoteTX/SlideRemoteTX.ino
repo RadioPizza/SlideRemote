@@ -1,3 +1,6 @@
+// SlideRemote v1.0.0
+// Передатчик
+
 // Подключение библиотек
 #include <EncButton.h>
 #include <ESP8266WiFi.h>

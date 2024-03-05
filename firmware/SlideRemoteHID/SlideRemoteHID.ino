@@ -1,3 +1,5 @@
+// SlideRemote v1.0.0
+
 // Подключение библиотек
 #include <DigiKeyboard.h>
 
