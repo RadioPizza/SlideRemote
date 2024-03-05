@@ -7,11 +7,11 @@ typedef struct struct_message {
   bool buttonPrev;
 } struct_message;
   
-struct_message incomingData;
+struct_message myData;
 
 // Функция, вызываемая при получении данных
 void OnDataRecv(uint8_t * mac, uint8_t *incomingData, uint8_t len) {
-  memcpy(&incomingData, incomingData, sizeof(incomingData));
+  memcpy(&myData, incomingData, sizeof(incomingData));
   if (((struct_message *)incomingData)->buttonNext) {
     Serial.println("Received Next command");
     // Действие при получении команды "Next"
