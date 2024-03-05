@@ -1,5 +1,9 @@
+// Подключение библиотек
 #include <ESP8266WiFi.h>
 #include <espnow.h>
+
+#define prevPIN D4
+#define nextPIN D3
 
 // Структура, принимаемая от передатчика
 typedef struct struct_message {
@@ -13,11 +17,15 @@ struct_message myData;
 void OnDataRecv(uint8_t * mac, uint8_t *incomingData, uint8_t len) {
   memcpy(&myData, incomingData, sizeof(incomingData));
   if (((struct_message *)incomingData)->buttonNext) {
-    Serial.println("Received Next command");
+    digitalWrite(nextPIN, HIGH);
+    delay(10);
+    digitalWrite(nextPIN, LOW);
     // Действие при получении команды "Next"
   }
   if (((struct_message *)incomingData)->buttonPrev) {
-    Serial.println("Received Previous command");
+    digitalWrite(prevPIN, HIGH);
+    delay(10);
+    digitalWrite(prevPIN, LOW);
     // Действие при получении команды "Previous"
   }
 }
