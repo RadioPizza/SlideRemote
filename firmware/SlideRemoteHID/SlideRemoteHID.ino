@@ -5,21 +5,21 @@
 #include <DigiKeyboard.h>
 
 // Настройка пинов подключения
-#define prevPin 0
-#define nextPin 1
+#define PREV_PIN 0
+#define NEXT_PIN 1
 
 void setup() {
-  pinMode(prevPin, INPUT);
-  pinMode(nextPin, INPUT);
+  pinMode(PREV_PIN, INPUT);
+  pinMode(NEXT_PIN, INPUT);
 }
 
 void loop() {
-  if (digitalRead(prevPin)){
+  if (digitalRead(PREV_PIN)){
     DigiKeyboard.sendKeyStroke(KEY_ARROW_LEFT);
     DigiKeyboard.delay(10);
   }
   
-  if (digitalRead(nextPin)){
+  if (digitalRead(NEXT_PIN)){
     DigiKeyboard.sendKeyStroke(KEY_SPACE);
     DigiKeyboard.delay(10);
   }

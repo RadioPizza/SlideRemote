@@ -6,8 +6,8 @@
 #include <espnow.h>
 
 // Настройка пинов подключения
-#define prevPin D4
-#define nextPin D3
+#define PREV_PIN D4
+#define NEXT_PIN D3
 
 // Структура, принимаемая от передатчика
 struct StructMessage {
@@ -18,10 +18,10 @@ struct StructMessage {
 StructMessage myData;
 
 void setupPins() {
-  pinMode(nextPin, OUTPUT);
-  pinMode(prevPin, OUTPUT);
-  digitalWrite(nextPin, LOW);
-  digitalWrite(prevPin, LOW);
+  pinMode(NEXT_PIN, OUTPUT);
+  pinMode(PREV_PIN, OUTPUT);
+  digitalWrite(NEXT_PIN, LOW);
+  digitalWrite(PREV_PIN, LOW);
 }
 
 void setupWiFi() {
@@ -38,8 +38,8 @@ void setupWiFi() {
 void OnDataRecv(uint8_t * mac, uint8_t *incomingData, uint8_t len) {
   StructMessage *msg = (StructMessage *)incomingData;
   if (len == sizeof(StructMessage)) {
-    if (msg->buttonNext) triggerSlideChange(nextPin);
-    if (msg->buttonPrev) triggerSlideChange(prevPin);
+    if (msg->buttonNext) triggerSlideChange(NEXT_PIN);
+    if (msg->buttonPrev) triggerSlideChange(PREV_PIN);
   } else {
     Serial.println("Received data size does not match");
   }
@@ -49,7 +49,7 @@ void triggerSlideChange(int pin) {
   digitalWrite(pin, HIGH);
   delay(10);
   digitalWrite(pin, LOW);
-  Serial.println(pin == nextPin ? "Next slide" : "Previous slide");
+  Serial.println(pin == NEXT_PIN ? "Next slide" : "Previous slide");
 }
 
 void setup() {

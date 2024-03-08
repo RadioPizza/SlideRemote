@@ -7,14 +7,14 @@
 #include <espnow.h>
 
 // Настройка пинов подключения
-#define buttonPrevPin D1
-#define buttonNextPin D2
-#define buttonLaserPin D3
-#define laserPin D0
+#define BTN_PREV_PIN D1
+#define BTN_NEXT_PIN D2
+#define BTN_LASER_PIN D3
+#define LED_LASER_PIN D0
 
-Button buttonPrev(buttonPrevPin);
-Button buttonNext(buttonNextPin);
-Button buttonLaser(buttonLaserPin);
+Button buttonPrev(BTN_PREV_PIN);
+Button buttonNext(BTN_NEXT_PIN);
+Button buttonLaser(BTN_LASER_PIN);
 
 // MAC адрес приёмника
 const uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
@@ -40,7 +40,7 @@ void setupWiFi() {
 
 void setup() {
   Serial.begin(9600);
-  pinMode(laserPin, OUTPUT);
+  pinMode(LED_LASER_PIN, OUTPUT);
   setupWiFi();
   Serial.println("Initialization completed successfully");
 }
@@ -56,10 +56,10 @@ void updateButtonsState(bool next, bool prev) {
 
 void handleLaserButton() {
   if (buttonLaser.press()) {
-    digitalWrite(laserPin, HIGH);
+    digitalWrite(LED_LASER_PIN, HIGH);
     Serial.println("Laser ON");
   } else if (buttonLaser.release()) {
-    digitalWrite(laserPin, LOW);
+    digitalWrite(LED_LASER_PIN, LOW);
     Serial.println("Laser OFF");
   }
 }
