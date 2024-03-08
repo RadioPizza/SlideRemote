@@ -45,7 +45,7 @@
 | Digispark             | 250 ₽ | 1 шт.  | 250 ₽     | https://aliexpress.ru/item/32807895683.html?sku_id=10000007831801690&spm=a2g2w.productlist.search_results.0.57674f500AUV34 https://aliexpress.ru/item/1005004203065658.html?sku_id=12000028365468636&spm=a2g2w.productlist.search_results.3.5d115ba6QB8ZHz    |                                                                  |
 | Переключатель         | 20 ₽  | 1 шт.  | 20 ₽      | https://aliexpress.ru/item/4001202080623.html?sku_id=10000015286215548&spm=a2g2w.productlist.search_results.15.36e9243dFkvmUQ https://aliexpress.ru/item/1005001513148147.html?sku_id=12000031633680801&spm=a2g2w.productlist.search_results.0.6c5450dcP7qKsL | Нужен для откючения питания                                      |
 
-Можно вместо одной из плат Wemos D1 Mini и платы TP4056 использовать очень интересную плату ESP-Wroom-02 D1 Mini + 18650, представляющую собой ESP8266 со встроенной зарядкой для литиевых аккумуляторов и холдером для аккумуляторов 18650 - https://aliexpress.ru/item/33060514583.html?sku_id=67531965171&spm=a2g2w.productlist.search_results.9.57387298mYMHuy
+Можно вместо одной из плат Wemos D1 Mini и платы TP4056 использовать очень интересную плату [ESP-Wroom-02 D1 Mini + 18650](https://aliexpress.ru/item/33060514583.html?sku_id=67531965171&spm=a2g2w.productlist.search_results.9.57387298mYMHuy), представляющую собой ESP8266 со встроенной зарядкой для литиевых аккумуляторов и холдером для аккумуляторов 18650.
 
 Итоговая стоимость варьируется от **450 рублей** (при покупке мелким оптом и повторном использовании кнопок и аккумулятора) до **2000 рублей** (при покупке в розницу в местных магазинах и использовании нового большого аккумулятора)
 
@@ -53,22 +53,22 @@
 ## Как скачать и прошить
 1. Установить и запустить Arduino IDE - [официальный сайт](https://www.arduino.cc/en/software')
 2. Установить драйвера для контроллеров
-  - CH340/CH341 - [официальный сайт](https://wch-ic.com/downloads/CH341SER_EXE.html)
-  - CP2102 - [официальный сайт](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
+  * CH340/CH341 - [официальный сайт](https://wch-ic.com/downloads/CH341SER_EXE.html)
+  * CP2102 - [официальный сайт](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
 3. Добавить допополнительные ссылки для менеджера плат
-  - `Arduino IDE/Файл/Настройки/` В `Дополнительные ссылки …` добавить через `;`
-  - `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
-  - `https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json`
+  * `Arduino IDE/Файл/Настройки/` В `Дополнительные ссылки …` добавить через `;`
+    - `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
+    - `https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json`
 4. Установить в менеджере плат:
-  - `ESP8266 boards` рекомендуется версия 2.7.4
-  - `Digistump AVR Boards` рекомендуется версия 1.6.7
+  * `ESP8266 boards` рекомендуется версия 2.7.4
+  * `Digistump AVR Boards` рекомендуется версия 1.6.7
 5. Скачать архив с проектом (зелёная кнопка Code/Download ZIP)
 6. Установить библиотеки (заменить имеющиеся версии) в 
-  - `C:\Program Files (x86)\Arduino\libraries\` (Windows x64)  
-  - `C:\Program Files\Arduino\libraries\` (Windows x86)
+  * `C:\Program Files (x86)\Arduino\libraries\` (Windows x64)  
+  * `C:\Program Files\Arduino\libraries\` (Windows x86)
 7. По очереди открыть файлы прошивки для каждого из микроконтроллеров, выбирая использумые платы и порт, прошить их
-  - `LOLIN Wemos D1 R2 & mini` изменяйте в зависимости от используемой платы
-  - `Digispark (Default – 16.5mhz)` ДО ПОДКЛЮЧЕНИЯ платы нажимаем загрузка, ждём компиляции. Появится надпись “подключите плату”. Втыкаем плату в USB и прошивка загружается.
+  8 `LOLIN Wemos D1 R2 & mini` изменяйте в зависимости от используемой платы
+  * `Digispark (Default – 16.5mhz)` ДО ПОДКЛЮЧЕНИЯ платы нажимаем загрузка, ждём компиляции. Появится надпись “подключите плату”. Втыкаем плату в USB и прошивка загружается.
 
 ### Настройки в коде
 #### SlideRemoteTX.ino
@@ -84,9 +84,6 @@ const uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
 ```
 #### SlideRemoteRX.ino
 ```cpp
-// SlideRemote v1.0.1
-// RX - Приёмник
-
 // Настройка пинов подключения
 #define PREV_PIN D4
 #define NEXT_PIN D3
