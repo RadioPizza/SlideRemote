@@ -12,16 +12,13 @@
 
 ### Железо
 - Проект собран на базе пары микроконтроллеров ESP8266.
-- Для реализации USB HID используется микроконтроллер Attiny85 (в дальнейшем планируется отказаться от его использования).
+- Для реализации USB HID используется микроконтроллер Attiny85 за неимением у ESP8266 аппаратного USB (можно попробовать отказаться от AVR костыля, используя V-USB, проект открыт для ваших PR.
 
 ### Фишки
 - Пара кнопок для навигации по слайдам: "впёрёд" и "назад"
 - Встроенная лазерная указка
 - Автономное питание от литиевого аккумулятора и встроенная зарядка для него - батарейки не понадобятся
 - Быстрое соединение благодаря ESP-NOW - ничего устанавливать на компьютер и настраивать не нужно
-
-### Корпус и печатная плата
-- В разработке, пока что проект собирается только на готовых модулях
 
 <a id="chapter-1"></a>
 ## Папки
@@ -54,21 +51,49 @@
 
 <a id="chapter-4"></a>
 ## Как скачать и прошить
-* Скачать архив с проектом
-* Установить библиотеки (заменить имеющиеся версии) в 
+1. Установить и запустить Arduino IDE - [официальный сайт](https://www.arduino.cc/en/software')
+2. Установить драйвера для контроллеров
+  - CH340/CH341 - [официальный сайт](https://wch-ic.com/downloads/CH341SER_EXE.html)
+  - CP2102 - [официальный сайт](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
+3. Добавить допополнительные ссылки для менеджера плат
+  - `Arduino IDE/Файл/Настройки/` В `Дополнительные ссылки …` добавить через `;`
+  - `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
+  - `https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json`
+4. Установить в менеджере плат:
+  - `ESP8266 boards` рекомендуется версия 2.7.4
+  - `Digistump AVR Boards` рекомендуется версия 1.6.7
+5. Скачать архив с проектом (зелёная кнопка Code/Download ZIP)
+6. Установить библиотеки (заменить имеющиеся версии) в 
   - `C:\Program Files (x86)\Arduino\libraries\` (Windows x64)  
   - `C:\Program Files\Arduino\libraries\` (Windows x86)
-* Продолжение не дописано
-
+7. По очереди открыть файлы прошивки для каждого из микроконтроллеров, выбирая использумые платы и порт, прошить их
+  - `LOLIN Wemos D1 R2 & mini` изменяйте в зависимости от используемой платы
+  - `Digispark (Default – 16.5mhz)` ДО ПОДКЛЮЧЕНИЯ платы нажимаем загрузка, ждём компиляции. Появится надпись “подключите плату”. Втыкаем плату в USB и прошивка загружается.
 
 ### Настройки в коде
+#### SlideRemoteTX.ino
 ```cpp
 // Настройка пинов подключения
-Button buttonPrev(D1);
-Button buttonNext(D2);
-Button buttonLaser(D3);
-#define LASER_PIN D0
+#define BTN_PREV_PIN D1
+#define BTN_NEXT_PIN D2
+#define BTN_LASER_PIN D3
+#define LED_LASER_PIN D0
 
 // MAC адрес приёмника
-uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
+const uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
+```
+#### SlideRemoteRX.ino
+```cpp
+// SlideRemote v1.0.1
+// RX - Приёмник
+
+// Настройка пинов подключения
+#define PREV_PIN D4
+#define NEXT_PIN D3
+```
+#### SlideRemoteHID.ino
+```cpp
+// Настройка пинов подключения
+#define PREV_PIN 0
+#define NEXT_PIN 1
 ```
