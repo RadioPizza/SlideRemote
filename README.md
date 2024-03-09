@@ -71,10 +71,10 @@
 #### SlideRemoteTX.ino
 ```cpp
 // Настройка пинов подключения
-#define BTN_PREV_PIN D1
-#define BTN_NEXT_PIN D2
-#define BTN_LASER_PIN D3
-#define LED_LASER_PIN D0
+#define BTN_PREV_PIN 5   // это D1 на Wemos
+#define BTN_NEXT_PIN 4   // это D2 на Wemos
+#define BTN_LASER_PIN 0  // это D3 на Wemos
+#define LED_LASER_PIN 16 // это D0 на Wemos
 
 // MAC адрес приёмника
 uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
@@ -82,8 +82,8 @@ uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
 #### SlideRemoteRX.ino
 ```cpp
 // Настройка пинов подключения
-#define PREV_PIN D4
-#define NEXT_PIN D3
+#define PREV_PIN 2 // это D4 на Wemos
+#define NEXT_PIN 0 // это D3 на Wemos
 ```
 #### SlideRemoteHID.ino
 ```cpp
