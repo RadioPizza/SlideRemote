@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-09T23:25:53.192Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="pB_vYZ6MM4I9eSgYBYxD" version="24.0.4" type="device">
+<mxfile host="app.diagrams.net" modified="2024-03-09T23:36:29.141Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="biD0u8p_r3RwRiD2-vmQ" version="24.0.4" type="device">
   <diagram name="Page-1" id="90a13364-a465-7bf4-72fc-28e22215d7a0">
     <mxGraphModel dx="1688" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="3a17f1ce550125da-4" value="Laser" style="whiteSpace=wrap;html=1;shadow=1;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="673" y="510" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1jCkPo_z_0LnxoEgLk_F-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="3a17f1ce550125da-7" target="1jCkPo_z_0LnxoEgLk_F-3" edge="1">
+        <mxCell id="1jCkPo_z_0LnxoEgLk_F-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" parent="1" source="3a17f1ce550125da-7" target="1jCkPo_z_0LnxoEgLk_F-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="3a17f1ce550125da-7" value="ESP MCU" style="whiteSpace=wrap;html=1;shadow=1;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
@@ -33,14 +33,14 @@
         <mxCell id="1jCkPo_z_0LnxoEgLk_F-2" value="ESP MCU" style="whiteSpace=wrap;html=1;shadow=1;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="673" y="590" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1jCkPo_z_0LnxoEgLk_F-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1jCkPo_z_0LnxoEgLk_F-3" target="1jCkPo_z_0LnxoEgLk_F-10" edge="1">
+        <mxCell id="1jCkPo_z_0LnxoEgLk_F-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" parent="1" source="1jCkPo_z_0LnxoEgLk_F-3" target="1jCkPo_z_0LnxoEgLk_F-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1jCkPo_z_0LnxoEgLk_F-3" value="AVR MCU" style="whiteSpace=wrap;html=1;shadow=1;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="1040" y="590" width="120" height="60" as="geometry" />
+          <mxGeometry x="1050" y="590" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1jCkPo_z_0LnxoEgLk_F-10" value="PC" style="whiteSpace=wrap;html=1;shadow=1;fontSize=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="1180" y="590" width="120" height="60" as="geometry" />
+          <mxGeometry x="1200" y="590" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="S1aHPvI7XwZI9kH2xxPf-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="S1aHPvI7XwZI9kH2xxPf-11" target="1jCkPo_z_0LnxoEgLk_F-2">
           <mxGeometry relative="1" as="geometry" />
