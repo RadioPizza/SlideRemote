@@ -49,10 +49,10 @@
 <a id="chapter-4"></a>
 ## Как скачать и прошить
 1. Установить и запустить Arduino IDE - [официальный сайт](https://www.arduino.cc/en/software')
-2. Установить драйвера для контроллеров
+2. Установить драйвера для контроллеров:
   * CH340/CH341 - [официальный сайт](https://wch-ic.com/downloads/CH341SER_EXE.html)
   * CP2102 - [официальный сайт](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
-3. Добавить допополнительные ссылки для менеджера плат
+3. Добавить допополнительные ссылки для менеджера плат:
   * `Arduino IDE/Файл/Настройки/Дополнительные ссылки …` добавить через `,`
     - `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
     - `https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json`
