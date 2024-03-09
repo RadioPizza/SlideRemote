@@ -1,12 +1,12 @@
 // SlideRemote v1.0.1
 // USB HID
 
-// Подключение библиотек
+// Подключение библиотеки
 #include <DigiKeyboard.h>
 
 // Настройка пинов подключения
-#define PREV_PIN 0
-#define NEXT_PIN 1
+#define PREV_PIN 1
+#define NEXT_PIN 0
 
 void setup() {
   pinMode(PREV_PIN, INPUT);

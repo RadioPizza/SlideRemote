@@ -1,5 +1,5 @@
 // SlideRemote v1.0.1
-// Передатчик
+// TX - Передатчик
 
 // Подключение библиотек
 #include <EncButton.h>
@@ -17,7 +17,7 @@ Button buttonNext(BTN_NEXT_PIN);
 Button buttonLaser(BTN_LASER_PIN);
 
 // MAC адрес приёмника
-const uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
+uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
 
 // Структура для отправки данных
 struct StructMessage {

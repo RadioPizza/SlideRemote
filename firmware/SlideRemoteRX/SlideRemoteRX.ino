@@ -6,8 +6,8 @@
 #include <espnow.h>
 
 // Настройка пинов подключения
-#define PREV_PIN D4
-#define NEXT_PIN D3
+#define PREV_PIN 2 // это D4 на Wemos
+#define NEXT_PIN 0 // это D3 на Wemos
 
 // Структура, принимаемая от передатчика
 struct StructMessage {

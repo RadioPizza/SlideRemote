@@ -53,7 +53,7 @@
   * CH340/CH341 - [официальный сайт](https://wch-ic.com/downloads/CH341SER_EXE.html)
   * CP2102 - [официальный сайт](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
 3. Добавить допополнительные ссылки для менеджера плат
-  * `Arduino IDE/Файл/Настройки/` В `Дополнительные ссылки …` добавить через `;`
+  * `Arduino IDE/Файл/Настройки/Дополнительные ссылки …` добавить через `,`
     - `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
     - `https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json`
 4. Установить в менеджере плат:
@@ -77,7 +77,7 @@
 #define LED_LASER_PIN D0
 
 // MAC адрес приёмника
-const uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
+uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xDE, 0xB3, 0x6B};
 ```
 #### SlideRemoteRX.ino
 ```cpp
